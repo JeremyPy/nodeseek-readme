@@ -26,12 +26,12 @@ export default async function handler(req, res) {
 
     // 3. 动态拼接生成 SVG 图片 (可以根据个人喜好修改颜色和样式)
     const svg = `
-  <svg width="460" height="120" xmlns="http://www.w3.org/2000/svg">
-    <rect width="100%" height="100%" fill="#1e1e2e" rx="8"/>
-    <text x="20" y="35" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif" font-weight="bold" font-size="16" fill="#cba6f7">🔍 访客网络信息</text>
-    <text x="20" y="65" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', monospace" font-size="14" fill="#a6e3a1">IP 地址：${ip}</text>
-    <text x="20" y="85" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', monospace" font-size="14" fill="#89b4fa">运营商/地区：${isp}（${country}）</text>
-    <text x="20" y="105" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', monospace" font-size="14" fill="${quality.includes('⚠️') ? '#f38ba8' : '#a6e3a1'}">IP 质量：${quality}</text>
+  <svg width="620" height="150" viewBox="0 0 620 150" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#1e1e2e" rx="14"/>
+    <text x="24" y="42" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif" font-weight="bold" font-size="20" fill="#cba6f7">🔍 访客网络信息</text>
+    <text x="24" y="82" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', monospace" font-size="18" fill="#a6e3a1">IP 地址：${ip}</text>
+    <text x="24" y="112" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', monospace" font-size="18" fill="#89b4fa">运营商/地区：${isp}（${country}）</text>
+    <text x="24" y="138" font-family="'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', monospace" font-size="18" fill="${quality.includes('⚠️') ? '#f38ba8' : '#a6e3a1'}">IP 质量：${quality}</text>
   </svg>
   `;
 
